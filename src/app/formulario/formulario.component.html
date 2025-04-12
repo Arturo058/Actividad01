@@ -1,0 +1,155 @@
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="contenedor">
+    <form>
+        <fieldset>
+          <legend>Formulario de inscripcion a la actividad</legend>
+          <div>
+            <label for="exampleInputEmail1" class="form-label mt-4">Apellido</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coloca tus apellidos aqui">
+            <small id="emailHelp" class="form-text text-muted"></small>
+          </div>
+          <div>
+            <label for="exampleInputPassword1" class="form-label mt-4">Nombre de Pila</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nombre" autocomplete="off">
+          </div>
+          <div>
+            <label for="exampleSelect1" class="form-label mt-4">Años de experiencia</label>
+            <select class="form-select" id="exampleSelect1">
+            <option>-</option>
+              <option>1 a 2 Años</option>
+              <option>3 a 4 Años</option>
+              <option>5 a 6 Años</option>
+              <option>6 o mas Años</option>
+            </select>
+          </div>
+          <div>
+            <label for="exampleSelect1" class="form-label mt-4">Area en la cual se va a enforcar</label>
+            <select class="form-select" id="Desarrollador" disabled="">
+              <option>Desarrollo web</option>
+              <option>Desarrollo móvil</option>
+              <option>Inteligencia artificial</option>
+              <option>Ciberseguridad              </option>
+              <option>Desarrollo de videojuegos              </option>
+            </select>
+          </div>
+          <div>
+            <label for="exampleSelect2" class="form-label mt-4">¿Cuál de los siguientes lenguajes es más utilizado para el desarrollo web del lado del cliente?
+            </label>
+            <select multiple="" class="form-select" id="exampleSelect2">
+              <option>Python</option>
+              <option>Java</option>
+              <option>C++</option>
+              <option>JavaScrip</option>
+              <option>Ruby</option>
+            </select>
+          </div>
+          <div>
+            <label for="exampleTextarea" class="form-label mt-4">Explica como ha sido tu destacamiento en las empresas anteriores que trabajaste</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+          <div>
+            <label for="formFile" class="form-label mt-4">Currículum Vitae (CV)</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>
+          <fieldset>
+            <legend class="mt-4">¿En qué entornos prefieres trabajar?</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Linea de comandos
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked="">
+              <label class="form-check-label" for="flexCheckChecked">
+                Entorno grafico
+              </label>
+            </div>
+          </fieldset>
+          <fieldset class="mt-4">
+            <legend>¿Has trabajado antes con un equipo de 10 personas o más?</legend>
+            
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="radio" name="equipo10" id="flexRadioSi" value="si">
+              <label class="form-check-label" for="flexRadioSi">Sí</label>
+            </div>
+            
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="radio" name="equipo10" id="flexRadioNo" value="no">
+              <label class="form-check-label" for="flexRadioNo">No</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="mt-4">Trabajo en equipo</legend>
+            
+            <!-- Capacidad para trabajar en equipo -->
+            <div class="mb-4">
+              <label for="teamWorkRange" class="form-label d-flex justify-content-between">
+                <span>¿Qué tanto te consideras capacitado para trabajar en equipo?</span>
+                <span><output id="teamWorkValue">2.5</output>/5</span>
+              </label>
+              <input type="range" class="form-range" min="0" max="5" step="0.5" id="teamWorkRange" 
+                     oninput="document.getElementById('teamWorkValue').value = this.value">
+              <div class="d-flex justify-content-between">
+                <small>0 (Nada)</small>
+                <small>5 (Mucho)</small>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="leadershipRange" class="form-label d-flex justify-content-between">
+                <span>¿Qué tan cómodo te sientes liderando un equipo?</span>
+                <span><output id="leadershipValue">2.5</output>/5</span>
+              </label>
+              <input type="range" class="form-range" min="0" max="5" step="0.5" id="leadershipRange" 
+                     oninput="document.getElementById('leadershipValue').value = this.value">
+              <div class="d-flex justify-content-between">
+                <small>0 (Nada cómodo)</small>
+                <small>5 (Muy cómodo)</small>
+              </div>
+            </div>
+          </fieldset>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+
+</div>
